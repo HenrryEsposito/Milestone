@@ -1,0 +1,50 @@
+/****** Colors *********/
+
+:root {
+    --color-lowo-white: rgba(255, 255, 255, 0.767); 
+    --color-lowero-white: rgba(255, 255, 255, 0.350); 
+    --color-background: #f0f1f6;
+    --color-background-dark: #bebfc2;
+    --color-primary: #6b3afe;
+    --color-primary-dark: #3f2be2;
+    --color-primary-darker: #2713aa;
+    --color-title-in-primary: #e6e7ec;
+    --color-text-in-primary: #d9dae0;
+    --color-text-title: #999999;
+    --color-text-complement: #58585a;
+    --color-text-base: #666680;
+}
+
+/****** Scrollbar Style *********/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    outline: none;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-lowero-white); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:  var(--color-lowo-white);  
+}
+
+/****** General Styles *********/
+
+html{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--color-background-dark) 0%, var(--color-background) 23%, var(--color-background) 100%);
+}
+
+body{
+    width: 98vw;
+    height: 98vh;
+    display: flex;   
+}

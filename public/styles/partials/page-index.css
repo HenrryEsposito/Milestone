@@ -1,0 +1,311 @@
+
+/****** Main div Style *********/
+
+.main{
+    width: 200%;
+    padding-right: 30px;
+}
+
+.main .header{
+    padding-top: 20px;
+}
+
+.main .header .header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .header .header-top .header-logo img{
+    height: 50px;
+    padding-right: 20px;
+}
+
+.main .header .header-top .header-info{
+    display: flex;
+    align-items: center;
+}
+
+.main .header .header-top .header-info a img{
+    height: 25px;
+    padding-right: 25px;
+}
+
+.main .header .header-top .header-info .profile-image{
+    display: flex;
+    align-items: center;
+}
+
+.main .header .header-top .header-info .profile-image h3{
+    color: var(--color-text-title);
+    font: 800 15px Arial, sans-serif;
+    padding-right: 25px;
+}
+
+.main .header .header-top .header-info .profile-image img{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main .header .header-tittle{
+    padding-top: 25px;
+    font: 20px Arial, sans-serif;
+}
+
+.main .knob{
+    height: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.main .knob .knob-image {
+    position: absolute;
+}
+
+.main .knob .grid{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 400px;
+    width: 400px;
+}
+
+.main .knob .grid button{
+    background-color:transparent;
+    border: 0px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.main .knob .grid button:focus {
+    outline: none;
+    border: none;
+}
+
+/****** Side Pannel div Style *********/
+
+.side-pannel{
+    width: 100%;
+    max-width: 505px;
+    height: auto;
+    border-radius: 45px;
+    background: var(--color-primary);
+    background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-primary) 53%, var(--color-primary-dark) 100%);
+    position: relative;
+}
+
+.side-pannel .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.side-pannel .header button{
+    color: var(--color-title-in-primary);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    font: 20px Arial, sans-serif;
+    background-color:transparent;
+    border: 0px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.side-pannel .header button:hover{
+    text-decoration: underline
+}
+
+.side-pannel .header button:focus {
+    outline: none;
+    border: none;
+}
+
+.side-pannel #tec-pannel{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.side-pannel #tec-pannel .tec-icon,
+.side-pannel #tec-pannel #empty-tec-icon{
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 80px;
+    background-color: var(--color-background);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1000 20px Arial, sans-serif;
+    color: var(--color-text-title);
+    word-break: break-all;
+}
+
+.side-pannel #tec-pannel #tec-icon-add{
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;;
+    height: 80px;
+    width: 80px;
+    background-color:transparent;
+    border: 4px dashed var(--color-primary-darker);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 60px Arial, sans-serif;
+    color: var(--color-primary-darker);
+}
+
+.side-pannel #tec-pannel #empty-tec-icon input{
+    font: 1000 20px Arial, sans-serif;
+    color: var(--color-text-title);
+    background-color:transparent;
+    height: 80px;
+    width: 80px;
+    outline: none;
+    border: none;
+}
+
+.side-pannel #tec-pannel #empty-tec-icon input:focus {
+    outline: none;
+    border: none;
+}
+
+.side-pannel #tec-pannel #empty-tec-icon-name{
+    text-align: center;
+    caret-color: var(--color-primary);
+}
+
+.side-pannel #results-pannel,
+.side-pannel #results-pannel-loading{
+    padding-left: 50px;
+    font: 700 25px Arial, sans-serif;
+    color: var(--color-title-in-primary);
+    height: 750px;
+    overflow: auto;
+}
+
+.side-pannel #results-pannel-loading{
+    padding: 0 50px;
+}
+
+.side-pannel #results-pannel .row{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 25px;
+}
+
+.side-pannel #results-pannel .tec{
+    width: 85px;
+    max-width: 85px;
+    word-break: break-all;
+}
+
+.side-pannel #results-pannel-loading .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+    gap: 25px;
+}
+
+.side-pannel #results-pannel .bar{
+    background-color: #f0f1f6;
+    box-shadow: 0px 0px 5px 2px var(--color-background);
+    border-radius: 20px;
+    
+    height: 10px;
+    animation-name: bar_results;
+    animation-duration: 4s;
+}
+
+.side-pannel #results-pannel-loading .tec{
+    border-radius: 20px;
+    height: 10px;
+    width: 70px;
+    background: var(--color-lowero-white);
+    box-shadow: 0px 0px 5px 2px var(--color-lowero-white);
+    animation: three 1s ease infinite;
+}
+
+.side-pannel #results-pannel-loading .bar{
+    border-radius: 20px;
+    height: 10px;
+    width: 300px;
+    background: var(--color-lowero-white);
+    box-shadow: 0px 0px 5px 2px var(--color-lowero-white);
+    animation: three 1s ease infinite;
+}
+
+.side-pannel #results-pannel-loading .result{
+    border-radius: 20px;
+    height: 10px;
+    width: 28px;
+    background: var(--color-lowero-white);
+    box-shadow: 0px 0px 5px 2px var(--color-lowero-white);
+    animation: three 1s ease infinite;
+}
+
+.side-pannel .bottom{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-pannel .bottom button{
+    width: 90%;
+    height: 50px;
+    background: var(--color-primary-dark);
+    border-radius: 25px;
+    cursor:pointer;
+    text-decoration: none;
+    border:none;
+    font: 700 25px Arial, sans-serif;
+    color: var(--color-title-in-primary);
+}
+
+.side-pannel .bottom button:hover{
+    box-shadow: 0px 0px 10px 2px var(--color-background);
+}
+
+.side-pannel .bottom button:focus {
+    outline: none;
+    border: none;
+}
+
+/****** Animations *********/
+
+@keyframes bar_results {
+    0% { width: 0; }
+}
+
+@keyframes three {
+    0%{    
+        background: linear-gradient(to right, var(--color-lowo-white) 0%, var(--color-lowero-white) 0%, var(--color-lowo-white) 100%);
+    }
+    25%{    
+        background: linear-gradient(to right, var(--color-lowo-white) 0%, var(--color-lowero-white) 25%, var(--color-lowo-white) 100%);
+    }
+    50%{    
+        background: linear-gradient(to right, var(--color-lowo-white) 0%, var(--color-lowero-white) 50%, var(--color-lowo-white) 100%);
+    }
+    75%{    
+        background: linear-gradient(to right, var(--color-lowo-white) 0%, var(--color-lowero-white) 75%, var(--color-lowo-white) 100%);
+    }
+    100%{    
+        background: linear-gradient(to right, var(--color-lowo-white) 0%, var(--color-lowero-white) 99%, var(--color-lowo-white) 100%);
+    }
+}

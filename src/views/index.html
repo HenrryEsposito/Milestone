@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MileStone | Job Insights</title>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/partials/page-index.css">
+
+    <script src="/scripts/index-script.js" defer></script>
+    <script src="/scripts/knob-script.js" defer></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header-top">
+                <div class="header-logo">
+                    <img src="/images/logoP.png" alt="Logo">
+                    <img src="/images/milestone.png" alt="MileStone">
+                </div>
+
+                <div class="header-info">
+                    <a href="https://github.com/HenrryEsposito">
+                        <img src="images/git.png" alt="github">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/henrry-esposito-7a2441121/">
+                        <img src="images/linkedin.png" alt="linkedin">
+                    </a>
+
+                    <a href="https://twitter.com/HenrryGEsposito">
+                        <img src="images/twitter.png" alt="twitter">
+                    </a>
+
+                    <div class="profile-image">
+                        <h3>Henrry Esposito</h3>
+                        <img src="https://avatars0.githubusercontent.com/u/52429925?s=460&u=36f28f3875d5bdccf669e5a240c1cc965e269319&v=4" alt="Henrry">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="header-tittle">
+                <h1>Tecnologias mais cotadas para <span>BackEnd</span></h1>
+            </div>
+        </div>
+
+        <div class="knob">
+            <img id="knob-image" src="/images/knob1.png" alt="">
+            <div class="grid">
+                <div></div>
+                <button class="10" type="button" onclick="knob_one()"></button>
+                <div></div>
+                <button class="40" type="button" onclick="knob_four()"></button>
+                <div></div>
+                <button class="20" type="button" onclick="knob_two()"></button>
+                <div></div>
+                <button class="30" type="button" onclick="knob_three()"></button>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-pannel">
+        <div class="header">
+            <button onclick="show_tec()" id="show-tec" style="color: {% if tec_dic == null %} #f0f1f6 {% else %} #f0f1f670 {% endif %}">Tecnologias</button>
+
+            <button onclick="show_results()" id="show-results" style="color: {% if tec_dic == null %} #f0f1f670 {% else %} #f0f1f6 {% endif %}">Resultados</button>
+        </div>
+
+        <div id="tec-pannel" style="display: {% if tec_dic == null %} grid {% else %} none {% endif %}">
+            <div class="tec-icon">Rest</div>
+            <div class="tec-icon">Git</div>
+            <div class="tec-icon">Java</div>
+            <div class="tec-icon">Python</div>
+            <div class="tec-icon">Aws</div>
+            <div class="tec-icon">Docker</div>
+            <div class="tec-icon">Mysql</div>
+            
+            <button id="tec-icon-add" style="display: initial" onclick="begin_add_tec()">+</button>
+            
+            <div id="empty-tec-icon" style="display: none">
+                <input type="text" id="empty-tec-icon-name" onkeyup="finish_add_tec(event)" onblur="finish_add_tec(event)">
+            </div>
+        </div>
+
+        <div id="results-pannel" style="display: {% if tec_dic == null %} none {% endif %}">
+            {% if tec_dic == null %}
+                <p>Nenhum resultado ainda.</p>
+            {% else %}
+                {% for tec in tec_dic %}
+                    <div class="row">
+                        <div class="tec">
+                            {{tec.tec_name}}
+                        </div>
+
+                        <div class="bar" style="width: {{(250/greater)*tec.value}}px">
+                        </div>
+
+                        <div class="number">
+                            {{tec.value}}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div id="results-pannel-loading" style="display: none">
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+
+            <div class="row">
+                <div class="tec"></div>
+                <div class="bar"></div>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <button onclick="show_loading_skeleton()" class="engine-search" type="submit" form="hidden-form"
+                id="engine-search">Pesquisar</button>
+        </div>
+    </div>
+
+    <div hidden>
+        <form id="hidden-form">
+            <input name="knob_index" id="stored-value" value=0>
+        </form>
+    </div>
+</body>
+</html>
