@@ -46,22 +46,19 @@ Maybe some people think that the UI is not totally adequate for this application
 Before you begin, you will need to have the following installed on your machine
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 
-#### 1) Clone this repository
-- `git clone <https://github.com/HenrryEsposito/Milestone>`
+#### 1) Clone this repository to your PC
+- `git clone https://github.com/HenrryEsposito/Milestone.git`
 
 #### 2) Access the project folder in the terminal
 - `cd Milestone`
 
 #### 3) Go to the server folder and install the dependencies
-- `cd server`
-- `npm install`
-- `npm i express`
-- `npm i nunjucks`
-- `npm i puppeteer`
+- `npm i`
+-  This will install Express, Nunjuncks and Puppeteer.
 
 #### 5) Run the application
 - `npm run dev`
--  The server will start at port: 5500 - go to `<http: // localhost: 5500>`
+-  The server will start at port: 5500 - go to `http://localhost:5500`
 
 ## :handshake: **Contributing**
 
