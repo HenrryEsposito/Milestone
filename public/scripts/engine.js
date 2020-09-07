@@ -40,8 +40,6 @@ async function search_engine (querry) {
 
 
   await page.goto('https://www.google.com/search?q=vagas+backend&rlz=1C1GCEA_enBR869BR869&oq=vagas+b&aqs=chrome.0.69i59j69i57j69i59j0l2j69i60l3.4544j0j1&sourceid=chrome&ie=UTF-8&ibp=htl;jobs&sa=X&ved=2ahUKEwiBqP2ooJLrAhXkJLkGHTm8D8gQiYsCKAJ6BAgKEBM&sxsrf=ALeKk02DyfWT-N1JOsUxtm0Ms6H-D_5ydg:1597118034701#htivrt=jobs&htidocid=eYCrmcBE8ic-23_yAAAAAA%3D%3D&fpstate=tldetail'); //<--- change this to another job search
-  await page.screenshot({path: 'example1.png'});
-  await sleep(1000);
 
   //scroll screen results of google to getter more jobs
   if(scroll_loops > 0){
